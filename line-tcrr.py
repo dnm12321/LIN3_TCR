@@ -2283,7 +2283,7 @@ def bot(op):
       #-------------Fungsi Balesan Respon Finish---------------------#
 
        #-------------Fungsi Speedbot Start---------------------#
-            elif msg.text in ["Sp","Speedbot"]:
+            elif msg.text in ["Sipid","Speedbot"]:
                 start = time.time()
                 cl.sendText(msg.to, "Waiting...")
                 elapsed_time = time.time() - start
