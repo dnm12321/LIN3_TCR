@@ -299,18 +299,7 @@ def bot(op):
                     X.preventJoinByTicket = True
                     ke.updateGroup(X)
                     Ti = ke.reissueGroupTicket(op.param1)
-                    
-            if op.param3 in Imid:
-                if op.param2 in mid:
-                    X = cl.getGroup(op.param1)
-                    X.preventJoinByTicket = False
-                    cl.updateGroup(X)
-                    Ti = cl.reissueGroupTicket(op.param1)
-                    ku.acceptGroupInvitationByTicket(op.param1,Ti)
-                    X.preventJoinByTicket = True
-                    cl.updateGroup(X)
-                    Ti = cl.reissueGroupTicket(op.param1)        
-
+                     
         if op.type == 13:
             print op.param1
             print op.param2
@@ -339,7 +328,7 @@ def bot(op):
                 else:
                     cl.cancelGroupInvitation(op.param1, matched_list)
                     
-        #------Joined User Kick start------#
+        #------Joined User   start------#
         if op.type == 17:
            if wait["Protectjoin"] == True:
                if op.param2 not in Bots:
@@ -2242,25 +2231,22 @@ def bot(op):
                 kk.sendText(msg.to,"Tidur lah,")
                 ki.sendText(msg.to,"ih.. Dasar Jones 􀜁􀅔Har Har􏿿")
             elif msg.text in ["Sayang"]:
-                cl.sendText(msg.to,"iya say?")
+                cl.sendText(msg.to,"Sayang ... sayang palalu peang,")
                 kk.sendText(msg.to,"Situ kan jomlo")
-                ki.sendText(msg.to,"􀜁􀅔Har Har􏿿")
+                ki.sendText(msg.to,"dasar jones 􀜁􀅔Har Har􏿿")
             elif msg.text in ["Bobo ah","Bobo dulu ah"]:
                 cl.sendText(msg.to,"Have a nice dream :)")
                 kk.sendText(msg.to,"Byee~")
                 ki.sendText(msg.to,"􀜁􀅔Har Har􏿿")
             elif msg.text in ["Cinta"]:
-                cl.sendText(msg.to,"Cinta itu kamu")
-                kk.sendText(msg.to,"Kamu itu ... ")
-                ki.sendText(msg.to,"􀜁􀅔Har Har􏿿")
+                cl.sendText(msg.to,"Cinta i ususmu minum yak*** tiap hari~~")
+                kk.sendText(msg.to,"􀜁􀅔Har Har􏿿")
             elif msg.text in ["#welcome"]:
                 ki.sendText(msg.to,"Selamat datang")
                 kk.sendText(msg.to,"Jangan nakal ya!")
 #-----------------------------------------------
             elif msg.text in ["PING","Ping","ping"]:
                 ki.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
 #-----------------------------------------------
 
        #-------------Fungsi Respon Start---------------------#
@@ -2350,7 +2336,8 @@ def bot(op):
                     ki.sendText(msg.to,"Blacklist emang pantas tuk di usir")
                     kk.sendText(msg.to,"Blacklist emang pantas tuk di usir")
                     kc.sendText(msg.to,"Blacklist emang pantas tuk di usir")
-            elif msg.text in ["Clear"]:
+           elif msg.text in ["Clear"]:
+             if msg.from_ in admin:
                 if msg.toType == 2:
                     group = cl.getGroup(msg.to)
                     gMembMids = [contact.mid for contact in group.invitee]
